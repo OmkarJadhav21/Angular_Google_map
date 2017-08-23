@@ -3,9 +3,8 @@
 <ng2-map center="Alephata, Pune"></ng2-map>
 
 
-
-
 <!-- This is another map-->
+<div class="squre">
 <ng2-map 
 zoom="13" 
 center="19.1854034, 74.0904242" 
@@ -18,6 +17,7 @@ mapTypeId="satellite">
     (initialized$)="onMarkerInit($event)"></marker>
 </ng2-map>
 
+</div>
 
 <!-- This is allow to access your location -->
 <ng2-map [options]="mapOptions"></ng2-map>
