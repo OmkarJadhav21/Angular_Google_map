@@ -1,0 +1,26 @@
+<!-- This Project is taken from site ===>> https://www.npmjs.com/package/ng2-map -->
+<p>
+  google-map works!
+</p>
+
+<ng2-map center="Alephata, Pune"></ng2-map>
+
+
+
+
+<!-- This is another map -->
+<ng2-map 
+zoom="13" 
+center="19.1854034, 74.0904242" 
+(mapReady$)="onMapReady($event)"
+(mapClick)="onMapClick($event)"
+(idle)="onIdle($event)"
+mapTypeId="satellite">
+  <marker *ngFor="let pos of positions" 
+    [position]="pos"
+    (initialized$)="onMarkerInit($event)"></marker>
+</ng2-map>
+
+
+<!-- This is allow to access your location -->
+<ng2-map [options]="mapOptions"></ng2-map>
